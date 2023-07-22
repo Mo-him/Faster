@@ -1,13 +1,10 @@
 import React, { useState } from "react";
  import { useNavigate } from 'react-router-dom';
- import {useHistory} from 'react-router-dom'
-import { Link } from 'react-router-dom'
 
 const Login = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [otpSent, setOtpSent] = useState(false);
-  const history = useHistory();
-  //const navigation = useNavigate();
+  const navigation = useNavigate();
 
   const handleMobileNumberChange = (e) => {
     setMobileNumber(e.target.value);
@@ -17,13 +14,16 @@ const Login = () => {
     const hardcodedOTP = '123456';
     console.log('OTP sent successfully:', hardcodedOTP);
     setOtpSent(true);
+    navigation("./OTPVerification");
+    
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (otpSent) {
       console.log('Logged in successfully with OTP:', mobileNumber);
-       history.push('/OTPVerification');
+       //history.push('/RestaurantList.js');
+       
       
     } else {
       handleSendOTP();
@@ -46,6 +46,12 @@ const Login = () => {
       </form>
     </div>
   );
+
+
+
+
+
+  
 
 };
 

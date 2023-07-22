@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ReactComponent as FastorLogo } from "/components/Logo.5a0cac78.png"; 
+import { ReactComponent as FastorLogo } from "./assets/Logo.5a0cac78.png"; 
 const RestaurantImageOverlay = () => {
   const [logoPosition, setLogoPosition] = useState({ x: 0, y: 0 });
 

@@ -1,24 +1,24 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-//import {useNavigate } from 'react-router-dom';
+//import { useHistory } from "react-router-dom";
+import {useNavigate } from 'react-router-dom';
 import RestaurantImageOverlay from "./RestaurantImageOverlay";
 
 const RestaurantDetail = () => {
-  const history = useHistory();
-  //const navigate = useNavigate();
+  //const history = useHistory();
+  const navigate = useNavigate();
 
   // Sample restaurant image URL
-  const restaurantImageURL = "IMAGE_URL";
+  const restaurantImageURL = "";
 
   const handleBack = () => {
-    history.goBack();
+    navigate.goBack();
   };
 
   return (
     <div>
       <button onClick={handleBack}>Back to Restaurant List</button>
       <img src={restaurantImageURL} alt="Restaurant" />
-      {/* <RestaurantImageOverlay /> */}
+      <RestaurantImageOverlay />
     </div>
   );
 };

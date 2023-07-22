@@ -27,6 +27,7 @@ const RestaurantList = () => {
           <h2>{restaurant.title}</h2>
           <p>{restaurant.desc}</p>
           <price>{restaurant.price}</price>
+          {/* Add other restaurant details */}
         </div>
       ))}
     </div>
@@ -36,35 +37,3 @@ const RestaurantList = () => {
 export default RestaurantList;
 
 
-
-// import React, { useEffect, useState } from 'react';
-// import { getNearbyRestaurants } from '../mockAPI';
-
-// const RestaurantList = () => {
-//   const [restaurants, setRestaurants] = useState([]);
-
-//   useEffect(() => {
-//     // Fetch nearby restaurants from the mock API
-//     const fetchNearbyRestaurants = async () => {
-//       const data = await getNearbyRestaurants();
-//       setRestaurants(data);
-//     };
-
-//     fetchNearbyRestaurants();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Restaurant List</h1>
-//       {restaurants.map((restaurant) => (
-//         <div key={restaurant.id}>
-//           <h3>{restaurant.name}</h3>
-//           <p>{restaurant.description}</p>
-//           <img src={restaurant.image} alt={restaurant.name} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default RestaurantList;
