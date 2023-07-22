@@ -7,7 +7,7 @@ const OTPVerification = () => {
 
   const handleOTPVerification = () => {
     if (otp === "123456") {
-        navigate("/restaurant-list");
+        navigate("/RestaurantList");
         alert("succefully")
     } else {
       console.log("Wrong OTP")
@@ -25,7 +25,7 @@ const OTPVerification = () => {
         onChange={(e) => setOTP(e.target.value)}
       />
       <br></br>
-      <button onClick={handleOTPVerification}>Verify OTP</button>
+      <button onClick={handleOTPVerification}>Verify</button>
     </div>
   );
 };

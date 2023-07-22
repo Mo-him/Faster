@@ -34,7 +34,8 @@ const Login = () => {
     <div>
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="mobileNumber">Mobile Number:</label>
+        <label htmlFor="mobileNumber">Enter Your Mobile Number:</label>
+        <p>We will send you 6 digit verification code</p>
         <input
           type="text"
           id="mobileNumber"
@@ -42,7 +43,7 @@ const Login = () => {
           onChange={handleMobileNumberChange}
           required
         />
-        <button type="submit">{otpSent ? 'Submit OTP' : 'Send OTP'}</button>
+        <button type="submit">{otpSent ? 'Submit Code' : 'Send Code'}</button>
       </form>
     </div>
   );

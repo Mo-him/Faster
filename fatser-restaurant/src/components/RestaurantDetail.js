@@ -7,7 +7,6 @@ const RestaurantDetail = () => {
   //const history = useHistory();
   const navigate = useNavigate();
 
-  // Sample restaurant image URL
   const restaurantImageURL = "";
 
   const handleBack = () => {
